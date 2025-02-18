@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 1100px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.main {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58.8px;
+    letter-spacing: 0%;
+}
+
+.add-task {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 34px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.view-type {
+    margin-bottom: 20px;
+}
+
+.view-type button {
+    background-color: white;
+    color: #979797;
+    border: none;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.view-type .active {
+    background-color: white;
+    color: #007bff;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+        border-bottom: 1px solid #979797;
+        padding: 15px;
+        text-align: left;
+    }
+
+    th {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17.15px;
+        letter-spacing: 0%;
+        color: #979797;
+    }
+
+    td {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17.15px;
+        letter-spacing: 0%;
+    }
+
+    .status {
+        font-weight: bold;
+    }
+
+    .not-done {
+        color: #FF3F3F;
+    }
+
+    .done {
+        color: black;
+    }
+
+    .in-progress {
+        color: #007FFF;
+    }
+
+    tr:hover {
+        background: #f9f9f9;
+        cursor: pointer;
+    }
+
+    th:nth-child(1),
+    td:nth-child(1) {
+        width: 25%;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+        width: 35%;
+    }
+
+    th:nth-child(3),
+    td:nth-child(3) {
+        width: 10%;
+    }
+
+    th:nth-child(4),
+    td:nth-child(4) {
+        width: 10%;
+    }
+
+    th:nth-child(5),
+    td:nth-child(5) {
+        width: 15%;
+    }
+}
+
+.divs {
+    width: 1100px;
+    gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .task {
+        padding-left: 24px;
+        padding-bottom: 24px;
+        width: 350px;
+        border-radius: 10px;
+        border: 1px solid #979797;
+        transition: 0.3s;
+
+        h3 {
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .desc {
+            color: #A5A5B4;
+        }
+
+        .time {
+            display: flex;
+            justify-content: space-between;
+            width: 102px;
+
+            p {
+                font-weight: 600;
+                font-size: 14px;
+                margin: 0;
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .task:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+}
+
+.table {
+    display: none;
+}
+
+.table.active {
+    display: block;
+}
+
+.divs {
+    display: none;
+}
+
+.divs.active {
+    display: grid;
+}

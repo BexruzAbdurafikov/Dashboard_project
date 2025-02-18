@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Dashboard</h1>
+        <button class="add-task">Добавить задачу</button>
+    </div>
+    <div class="view-type">
+        <span>Показать задачи как:</span>
+        <button class="showTable active">Таблица</button>
+        <button class="showDivs">Плитка</button>
+    </div>
+    <div class="container">
+        <table class="table active">
+            <thead>
+                <tr>
+                    <th>Заголовок задачи</th>
+                    <th>Описание задачи</th>
+                    <th>Дата</th>
+                    <th>Время</th>
+                    <th>Выполнено</th>
+                </tr>
+            </thead>
+
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="divs active"></div>
+    <script src="./arr.js"></script>
+    <script src="./script.js"></script>
+    <script src="./draw.js"></script>
+</body>
+
+</html>
