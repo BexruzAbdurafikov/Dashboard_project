@@ -1,6 +1,10 @@
 const container = document.querySelector('.container');
 const showTable = document.querySelector('.showTable');
 const showDivs = document.querySelector('.showDivs');
+const modalWindow = document.querySelector('.modal');
+const addTaskBtn = document.querySelector('.add-task');
+
+const addTaskModal = new Modal(modalWindow);
 
 showTable.onclick = () => {
     showTable.classList.add('active');
@@ -16,4 +20,8 @@ showDivs.onclick = () => {
     divs.classList.add('active');
     table.classList.remove('active');
     drawDivs(data)
+}
+
+addTaskBtn.onclick = () => {
+    addTaskModal.open();
 }
