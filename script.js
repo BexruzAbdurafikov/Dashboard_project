@@ -25,3 +25,4 @@ showDivs.onclick = () => {
 addTaskBtn.onclick = () => {
     addTaskModal.open();
 }
+
