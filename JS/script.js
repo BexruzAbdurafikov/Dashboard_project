@@ -3,6 +3,8 @@ const showTable = document.querySelector('.showTable');
 const showDivs = document.querySelector('.showDivs');
 const modalWindow = document.querySelector('.modal');
 const addTaskBtn = document.querySelector('.add-task');
+const closeBtn = document.querySelector('.close');
+const modal_content = document.querySelector('.modal__content');
 
 const addTaskModal = new Modal(modalWindow);
 
@@ -26,3 +28,24 @@ addTaskBtn.onclick = () => {
     addTaskModal.open();
 }
 
+closeBtn.onclick = () => {
+    addTaskModal.close();
+}
+
+window.addEventListener("click", (event) => {
+    if (event.target === modalWindow) {
+        addTaskModal.close();
+    }
+});
+
+const taskForm = document.forms.taskForm;
+taskForm.onsubmit = (ev) => {
+    ev.preventDefault();
+    const task = {};
+    const fm = new FormData(taskForm);
+    fm.forEach((value, key) => {
+        task[key] = value;
+    });
+    data.push(task);
+    taskForm.reset()
+}

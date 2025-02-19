@@ -39,11 +39,19 @@
     </main>
     <div class="modal">
         <div class="modal__content">
-            <form>
-                <input type="text" name="title" placeholder="Title">
-                <input type="text" name="desc" placeholder="Description">
-                <input type="date" name="date" placeholder="Date">
-                <input type="time" name="time" placeholder="Time">
+            <span class="close"><svg width="20" height="20" viewBox="0 0 26 26" fill="black"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 2L2 24" stroke="black" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M2 2L24 24" stroke="black" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </span>
+            <form name="taskForm">
+                <input type="text" name="title" placeholder="Title" required>
+                <input type="text" name="desc" placeholder="Description" required>
+                <input type="date" name="date" placeholder="Date" required>
+                <input type="time" name="time" placeholder="Time" required>
                 <button>Create</button>
             </form>
         </div>

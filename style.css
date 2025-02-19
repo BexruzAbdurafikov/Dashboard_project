@@ -216,6 +216,13 @@ h1 {
     background: white;
     border-radius: 10px;
     width: 25%;
+
+    .close{
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
 }
 
 form {
