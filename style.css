@@ -148,7 +148,6 @@ h1 {
     .task {
         padding-left: 24px;
         padding-bottom: 24px;
-        width: 350px;
         border-radius: 10px;
         border: 1px solid #979797;
         transition: 0.3s;
@@ -160,22 +159,18 @@ h1 {
 
         .desc {
             color: #A5A5B4;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            white-space: normal;
             max-width: 100%;
         }
 
         .time {
             display: flex;
             justify-content: space-between;
-            width: 102px;
-
+            width: 130px;
+            margin-bottom: 16px;
             p {
                 font-weight: 600;
                 font-size: 14px;
                 margin: 0;
-                margin-bottom: 16px;
             }
         }
     }
@@ -265,4 +260,13 @@ form {
     button:active {
         transform: scale(1.01);
     }
+}
+
+.task {
+    padding-left: 24px;
+    padding-bottom: 24px;
+    width: 350px;
+    border-radius: 10px;
+    border: 1px solid #979797;
+    transition: 0.3s;
 }
