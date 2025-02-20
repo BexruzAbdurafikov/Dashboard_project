@@ -28,9 +28,9 @@ function drawTable(arr) {
 
         tr.append(title, desc, date, time, isDone);
         tableBody.append(tr);
-        table.append(tableBody);
     }
-}
+    table.append(tableBody);
+    }
 
 function drawDivs(arr) {
     divs.innerHTML = '';

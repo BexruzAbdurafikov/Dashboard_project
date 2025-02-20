@@ -47,5 +47,7 @@ taskForm.onsubmit = (ev) => {
         task[key] = value;
     });
     data.push(task);
-    taskForm.reset()
-}
+    localStorage.setItem('tasks', JSON.stringify(data));
+    drawTable(data);
+    taskForm.reset();
+};

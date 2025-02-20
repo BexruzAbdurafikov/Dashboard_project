@@ -1,1 +1,1 @@
-const data = JSON.parse(localStorage.getItem('tasks')) ?? []
+const data = JSON.parse(localStorage.getItem('tasks')) ?? [];
