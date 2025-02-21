@@ -95,18 +95,6 @@ h1 {
         font-weight: bold;
     }
 
-    .not-done {
-        color: #FF3F3F;
-    }
-
-    .done {
-        color: black;
-    }
-
-    .in-progress {
-        color: #007FFF;
-    }
-
     tr:hover {
         background: #f9f9f9;
         cursor: pointer;
@@ -228,13 +216,13 @@ form {
     flex-direction: column;
     gap: 15px;
 
-    input {
+    input, select {
         padding: 10px;
         border-radius: 10px;
         border: 1px solid rgb(227, 227, 227);
     }
 
-    input:focus{
+    input:focus, select:focus{
         border: 1px solid #007bff;
         outline: none;
     }
@@ -268,4 +256,16 @@ form {
     border-radius: 10px;
     border: 1px solid #979797;
     transition: 0.3s;
+}
+
+.not-done {
+    color: #FF3F3F;
+}
+
+.done {
+    color: black;
+}
+
+.in-progress {
+    color: #007FFF;
 }

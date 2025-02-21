@@ -1,27 +1,13 @@
-const container = document.querySelector('.container');
-const showTable = document.querySelector('.showTable');
-const showDivs = document.querySelector('.showDivs');
-const modalWindow = document.querySelector('.modal');
-const addTaskBtn = document.querySelector('.add-task');
-const closeBtn = document.querySelector('.close');
-const modal_content = document.querySelector('.modal__content');
-
 const addTaskModal = new Modal(modalWindow);
 
 showTable.onclick = () => {
-    showTable.classList.add('active');
-    showDivs.classList.remove('active');
-    table.classList.add('active');
-    divs.classList.remove('active');
-    drawTable(data)
+    showTab(true);
+    localStorage.setItem('tab', 'table');
 }
 
 showDivs.onclick = () => {
-    showDivs.classList.add('active');
-    showTable.classList.remove('active');
-    divs.classList.add('active');
-    table.classList.remove('active');
-    drawDivs(data)
+    showTab(false);
+    localStorage.setItem('tab', 'divs');
 }
 
 addTaskBtn.onclick = () => {
@@ -48,6 +34,7 @@ taskForm.onsubmit = (ev) => {
     });
     data.push(task);
     localStorage.setItem('tasks', JSON.stringify(data));
-    drawTable(data);
+    draw(data);
     taskForm.reset();
+    addTaskModal.close();
 };
