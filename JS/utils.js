@@ -35,3 +35,9 @@ function showTab(show) {
     divs.classList.remove('active');
     drawTable(data);
 }
+
+function deletTask(index) {
+    data.splice(index, 1);
+    localStorage.setItem('tasks', JSON.stringify(data));
+    draw(data);
+}

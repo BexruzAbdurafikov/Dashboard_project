@@ -133,6 +133,7 @@ h1 {
     grid-template-columns: repeat(4, 1fr);
 
     .task {
+        width: 350px;       
         padding-left: 24px;
         padding-bottom: 24px;
         border-radius: 10px;
@@ -250,6 +251,7 @@ form {
 }
 
 .task {
+    position: relative;
     padding-left: 24px;
     padding-bottom: 24px;
     width: 350px;
@@ -272,7 +274,7 @@ form {
 
 .actions{
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
 .actions div{
@@ -285,4 +287,10 @@ form {
 
 .actions div:active{
     transform: scale(1.01);
+}
+
+.divs_actions{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
 }
