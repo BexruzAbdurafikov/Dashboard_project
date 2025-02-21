@@ -269,3 +269,20 @@ form {
 .in-progress {
     color: #007FFF;
 }
+
+.actions{
+    display: flex;
+    gap: 15px;
+}
+
+.actions div{
+    transition: 0.3s;
+}
+
+.actions div:hover{
+    transform: scale(1.1);
+}
+
+.actions div:active{
+    transform: scale(1.01);
+}
