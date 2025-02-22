@@ -43,6 +43,7 @@ function deletTask(index) {
 }
 
 function editTask(item) {
+    const closeBtn = document.querySelector('.close');
     const editModal = document.querySelector('.editModal');
     const task_title = document.querySelector('#task-title');
     const task_desc = document.querySelector('#task-desc');
