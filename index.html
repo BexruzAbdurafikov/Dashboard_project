@@ -62,6 +62,30 @@
             </form>
         </div>
     </div>
+    <div class="editModal modal">
+        <div id="editTaskModal" class="modal__content">
+            <span class="close"><svg width="20" height="20" viewBox="0 0 26 26" fill="black"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 2L2 24" stroke="black" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M2 2L24 24" stroke="black" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </span>
+            <form name="editForm">
+                <input id="task-title" type="text" name="title" placeholder="Title" required>
+                <input id="task-desc" type="text" name="desc" placeholder="Description" required>
+                <input id="task-date" type="date" name="date" placeholder="Date" required>
+                <input id="task-time" type="time" name="time" placeholder="Time" required>
+                <select id="task-status" name="isDone">
+                    <option value="Готово">Готово</option>
+                    <option value="В процессе">В процессе</option>
+                    <option value="Не выполнено">Не выполнено</option>
+                </select>
+                <button>Edit</button>
+            </form>
+        </div>
+    </div>
     <script src="./JS/arr.js"></script>
     <script src="./JS/utils.js"></script>
     <script src="./JS/draw.js"></script>
