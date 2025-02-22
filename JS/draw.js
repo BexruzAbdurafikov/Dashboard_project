@@ -119,9 +119,7 @@ function drawDivs(arr) {
                 editTaskModal.close();
             }  
         };
-
- 
-
+        
         actions.append(delet, edit);
         time.append(date, timeP);
         task.append(title, desc, time, isDone, actions);
