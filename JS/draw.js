@@ -122,6 +122,13 @@ function drawDivs(arr) {
             deletTask(index);
         }
 
+        edit.onclick = () => {
+            editTask(item);
+            };
+        };
+
+
+
         actions.append(delet, edit);
         time.append(date, timeP);
         task.append(title, desc, time, isDone, actions);

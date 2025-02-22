@@ -41,3 +41,36 @@ function deletTask(index) {
     localStorage.setItem('tasks', JSON.stringify(data));
     draw(data);
 }
+
+function editTask(item) {
+    const editModal = document.querySelector('.editModal');
+    const task_title = document.querySelector('#task-title');
+    const task_desc = document.querySelector('#task-desc');
+    const task_date = document.querySelector('#task-date');
+    const task_time = document.querySelector('#task-time');
+    const task_status = document.querySelector('#task-status');
+    const editTaskModal = new Modal(editModal);
+
+    task_title.value = item.title;
+    task_desc.value = item.desc;
+    task_date.value = item.date;
+    task_time.value = item.time;
+    task_status.value = item.isDone;
+
+    editTaskModal.open();
+
+    const editForm = document.forms.editForm;
+    editForm.onsubmit = (event) => {
+        event.preventDefault();
+
+        item.title = task_title.value;
+        item.desc = task_desc.value;
+        item.date = task_date.value;
+        item.time = task_time.value;
+        item.isDone = task_status.value;
+
+        localStorage.setItem('tasks', JSON.stringify(data));
+        draw(data);
+        editTaskModal.close();
+    }
+}
